@@ -1,0 +1,38 @@
+<div id="widget" class="panel panel-primary">
+	<div class="panel-heading"></div>
+	<form class="panel-body form-group" ng-submit="$ctrl.editMode ? $ctrl.onUpdate(id) : $ctrl.onCreate()">
+		<label for="title">Title:</label>
+			<input 
+			type="text"
+			id="title" 
+			class="form-control" 
+			data-ng-model="$ctrl.commentData.title"
+			required="required">
+		<label for="text">Description:</label>
+			<textarea 
+			rows="6" 
+			id="text" 
+			class="form-control" 
+			data-ng-model="$ctrl.commentData.text"
+			required="required"></textarea>
+		<label for="tags">Tags:</label>
+			<input 
+			list="tags" 
+			class="form-control"
+			data-ng-model="$ctrl.commentData.tags"
+			required="required">
+			<datalist id="tags"> 
+				<option 
+				ng-repeat="tag in $ctrl.tagOptions" 
+				ng-selected="$ctrl.commentData.tags === tag" 
+				value="{{ tag }}">
+			</datalist>
+		<hr>
+	 	<div class="btn-group pull-right">
+	 		<button 
+	 		type="button" class="btn btn-danger btn-rounded" ng-click="$ctrl.clear()">Cancel</button>
+	 		<button type="submit" class="btn btn-success btn-rounded" ng-if="!$ctrl.editMode">Save</button>
+	 		<button type="submit" class="btn btn-success btn-rounded" ng-if="$ctrl.editMode">Update</button>
+	 	</div>
+	</form>
+</div>

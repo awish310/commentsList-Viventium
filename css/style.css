@@ -1,0 +1,18 @@
+body {
+	background-color: #3b4f5b;
+}
+
+.btn-rounded {
+    border-radius:2rem;
+}
+
+
+.comment_card, #widget {
+	margin: 2rem;
+	box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.4);
+}
+
+.updatedComment {
+	border: 2px solid red;
+}
+

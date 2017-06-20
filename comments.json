@@ -1,0 +1,39 @@
+{"comments": [
+	{
+		"id": 1,
+		"title": "issue - Title",
+		"text": "This is a description of the issue",
+		"tags": "issue"
+	},
+	{
+		"id": 2,
+		"title": "issue - Title",
+		"text": "This is a description of the issue",
+		"tags": "issue"
+	},
+	{
+		"id": 3,
+		"title": "bug - Title",
+		"text": "This is a description of the bug",
+		"tags": "bug"
+	},
+	{
+		"id": 4,
+		"title": "bug - Title",
+		"text": "This is a description of the bug",
+		"tags": "bug"
+	},
+	{
+		"id": 5,
+		"title": "etc - Title",
+		"text": "This is a description of the etc",
+		"tags": "etc"
+	},
+	{
+		"id": 6,
+		"title": "etc - Title",
+		"text": "This is a description of the etc",
+		"tags": "etc"
+	}
+]
+}
