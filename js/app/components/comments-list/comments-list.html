@@ -1,1 +1,8 @@
-<comment ng-repeat="commentDetail in $ctrl.commentsData" comment="commentDetail"></comment>
+<label for="filterSelect">Search By Tag:</label>
+<select id="filterSelect" class="form-control" ng-model="searchList">
+	<option value="">All</option>
+	<option 
+	ng-repeat="tag in $ctrl.filterOptions" 	
+	value="{{ tag }}">{{ tag }}</option>
+</select>
+<comment ng-repeat="commentDetail in $ctrl.commentsData | filter:{tags:searchList}" comment="commentDetail"></comment>

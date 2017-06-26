@@ -2,6 +2,7 @@
 
 commentApp.service('commentsDataService', ['resourceService', function(resourceService) {
 	var serviceData = [];
+	this.tagOptions = ["bug","issue","etc"];
 
 	this.getData = function () {
 		//query by $resource
@@ -49,6 +50,12 @@ commentApp.service('commentsDataService', ['resourceService', function(resourceS
 				serviceData[i] = commentData;
 			}
 		}		
+	}
+
+	this.addNewTag = function(tag) {
+		if (this.tagOptions.indexOf(tag) === -1) {
+		 	this.tagOptions.push(tag);
+		}
 	}
 
 }])

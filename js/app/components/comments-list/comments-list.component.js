@@ -7,6 +7,7 @@ commentApp.component('commentsList', {
 	templateUrl:'./js/app/components/comments-list/comments-list.html',
 	controller: function(commentsDataService) {
 		this.commentsData = [];
+		this.filterOptions = commentsDataService.tagOptions;
 
 		this.onInit = function() {
 			this.getData();

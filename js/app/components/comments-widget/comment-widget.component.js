@@ -6,7 +6,7 @@ commentApp.component('commentWidget', {
 	}, 
 	templateUrl: './js/app/components/comments-widget/comments-widget.html',
 	controller: function(commentsDataService, $rootScope, $window) {
-		this.tagOptions = ["bug","issue","etc"];
+		this.tagOptions = commentsDataService.tagOptions;
 		this.editMode = false;
 		this.commentData = {
 			id: '',
@@ -45,9 +45,10 @@ commentApp.component('commentWidget', {
 		}
 
 		this.addNewOption = function (tag) {
-			if (this.tagOptions.indexOf(tag) === -1) {
-			 	this.tagOptions.push(tag);
-			}				
+			// if (this.tagOptions.indexOf(tag) === -1) {
+			//  	this.tagOptions.push(tag);
+			// }
+			commentsDataService.addNewTag(tag);				
 		}
 
 
